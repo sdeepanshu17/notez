@@ -1,0 +1,35 @@
+.note-desc{
+    color: white;
+    padding-left: 40px;
+}
+
+.last-edit{
+    text-align: center;
+    font-size: 12px;
+}
+
+.inpTitle{
+    background: transparent;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    width: 58vw;
+}
+.inpTitle:focus {
+    outline: none !important;
+}
+.inpContent{
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-family: "Verdana";
+    width: 58vw;
+    resize: none;
+    height: 60vh;
+
+}
+.inpContent:focus {
+    outline: none !important;
+}

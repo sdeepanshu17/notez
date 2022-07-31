@@ -1,0 +1,52 @@
+.main-content{
+    flex-grow: 1;
+    max-height: 100%;
+    display: flex;
+}
+
+.addBtn{
+    background-color: #e6b400;
+    border: 1px solid black;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    font-size: 30px;
+    position: absolute;
+    text-align: center;
+    left: 12px;
+    top: 45px;
+}
+.addBtn:hover{
+    cursor: pointer;
+    background-color: #daab00;
+}
+
+.add{
+    background-color: #202526;
+    height: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    width: 35vw;
+    /* flex-grow: 1; */
+}
+
+.bnote-cont{
+    background: transparent;
+    border: none;
+}
+
+.bnote-cont:last-child hr{
+    display: none;
+}
+
+hr {
+    margin-top: 0px;
+    margin-left: 16%;
+    margin-bottom: 0px;
+    width: 80%;
+}
+
+.noteDesc{
+    /* flex-grow: 3; */
+    width: 65vw;
+}

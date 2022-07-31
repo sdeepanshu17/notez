@@ -1,0 +1,28 @@
+.brief-note{
+    display: flex;
+    /* flex-direction: column; */
+    color: white;
+    padding: 10px 18px;
+    margin: 10px 40px;
+}
+.notes-text{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.brief-note:hover{
+    cursor: pointer;
+    border: 1px solid #fed602;
+    border-radius: 10px;
+    background-color: #9d842c;
+}
+.del-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brief-note span{
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
