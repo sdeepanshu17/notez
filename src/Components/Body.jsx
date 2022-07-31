@@ -24,7 +24,8 @@ function Body(props) {
     }
 
     function addNote() {
-        let index = notes[notes.length-1].id + 1;
+        let index = 0;
+        if (notes.length>0) index = notes[notes.length-1].id + 1;
         const newNotes = [...notes, {
             id: index,
             title: "Title",
@@ -92,7 +93,7 @@ function Body(props) {
             </div>
             <div className="noteDesc">
                 {console.log(notes)}
-                <NoteDesc onChange={event => handleChange(event, notes[ind].id)} note={notes[ind]}/>
+                {notes.length>0 ? <NoteDesc onChange={event => handleChange(event, notes[ind].id)} note={notes[ind]}/> : null } 
             </div>
         </div>
     )
