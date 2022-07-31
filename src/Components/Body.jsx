@@ -41,6 +41,7 @@ function Body(props) {
         updateNotes(prevNotes => {
             return newNotes
         })
+        setInd(newNotes.length-1);
         console.log(notes);
         window.localStorage.setItem("notes", JSON.stringify(newNotes));
     }
@@ -56,6 +57,7 @@ function Body(props) {
                 setInd(0);
             }
         }
+        if(ind!==0) setInd(ind-1);
         updateNotes(newNotes);
         window.localStorage.setItem("notes", JSON.stringify(newNotes));
         // setInd(0);
