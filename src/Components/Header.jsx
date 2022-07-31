@@ -1,10 +1,11 @@
-import React from "react";
-import "./Header.css"
+import React, {useState} from "react";
+import "./Header.css";
 
-function Header() {
+function Header(props) {
+
     return(
         <div className="header">
-            NOTEZZ
+            <span className="heading">NOTEZZ</span>
         </div>
     )
 }

@@ -12,10 +12,17 @@
     background: transparent;
     border: none;
     color: white;
+    word-wrap: break-word;
+    word-break: break-all;
     font-weight: bold;
+    height: 80px;
     font-size: 40px;
     width: 58vw;
 }
+/* input[type=text] {
+    word-wrap: break-word;
+    word-break: break-all;
+} */
 .inpTitle:focus {
     outline: none !important;
 }
@@ -32,4 +39,13 @@
 }
 .inpContent:focus {
     outline: none !important;
+}
+
+@media screen and (max-width: 900px) {
+    .inpTitle{
+        width: 85vw;
+    }
+    .inpContent{
+        width: 85vw;
+    }
 }

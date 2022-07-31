@@ -3,6 +3,10 @@ import BriefNote from "./BriefNote";
 import NoteDesc from "./NoteDesc";
 import list1 from "./notes";
 import "./Body.css";
+import * as FaIcons from 'react-icons/fa';
+import * as AiIcons from 'react-icons/ai';
+import { SidebarData } from './SidebarData';
+import { IconContext } from 'react-icons';
 
 function Body(props) {
 
@@ -13,6 +17,9 @@ function Body(props) {
     const [notes, updateNotes] = useState(JSON.parse(window.localStorage.getItem("notes")));
     // console.log(notes);
     // const [notes, updateNotes] = useState(list);
+
+    const [sidebar, setSidebar] = useState(false);
+    const showSidebar = () => setSidebar(!sidebar);
 
     function handleClick(event, param) {
         {notes.map((obj,i) => {
@@ -80,6 +87,30 @@ function Body(props) {
 
     return (
         <div className="main-content">
+            <span style={{zIndex: "1"}}>
+                <IconContext.Provider value={{ color: '#fff' }}>
+                    <div className='navbar'>
+                            <FaIcons.FaBars onClick={showSidebar} />
+                    </div>
+                    <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+                        <ul className='nav-menu-items' onClick={showSidebar}>
+                            <li className='navbar-toggle'>
+                                    <AiIcons.AiOutlineClose />
+                            </li>
+                            <li className="add-menu">
+                                {(!notes)? null : notes.map((obj) => {
+                                    return (
+                                        <div key={obj.id} className="bnote-cont">
+                                            <BriefNote onCl={event => handleClick(event, obj.id)} onChange={event => handleChange(event, obj.id)} onDel={event => delNote(event, obj.id)} note={obj} />
+                                            <hr></hr>
+                                        </div>
+                                    )
+                                })}
+                            </li>
+                        </ul>
+                    </nav>
+                </IconContext.Provider>
+            </span>
             <button className="addBtn" onClick={addNote}>+</button>
             <div className="add">
                 {(!notes)? null : notes.map((obj) => {
@@ -92,7 +123,7 @@ function Body(props) {
                 })}
             </div>
             <div className="noteDesc">
-                {console.log(notes)}
+                {/* {console.log(notes)} */}
                 {notes.length>0 ? <NoteDesc onChange={event => handleChange(event, notes[ind].id)} note={notes[ind]}/> : null } 
             </div>
         </div>

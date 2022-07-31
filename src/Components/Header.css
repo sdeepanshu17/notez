@@ -3,10 +3,17 @@
 
 .header{
     background-color: #fed602;
-    font-family: 'Bebas Neue', cursive;
-    font-size: 40px;
-    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
     padding-top: 10px;
     padding-bottom: 7px;
     text-align: center;
 }
+
+.heading{
+    font-family: 'Bebas Neue', cursive;
+    flex-grow: 1;
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
