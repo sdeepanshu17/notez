@@ -123,7 +123,7 @@ function Body(props) {
             </div>
             <div className="noteDesc">
                 {/* {console.log(notes)} */}
-                {notes.length>0 ? <NoteDesc onChange={event => handleChange(event, notes[ind].id)} note={notes[ind]}/> : null } 
+                {notes.length>0 ? <NoteDesc onChange={event => handleChange(event, notes[ind].id)} note={notes[ind]}/> : <h1 style={{color: "#fff", paddingLeft: "40px"}}>Add a note!</h1> } 
             </div>
         </div>
     )
