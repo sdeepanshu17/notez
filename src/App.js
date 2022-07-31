@@ -9,7 +9,6 @@ function App() {
   return (
     <div className="App">
       <Header notesList={list} />
-      {/* <Navbar /> */}
       <Body notesList={list} />
       <Footer />
     </div>

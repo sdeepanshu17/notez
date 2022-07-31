@@ -3,7 +3,7 @@
     /* flex-direction: column; */
     color: white;
     padding: 20px 18px;
-    /* margin: 10px 40px; */
+    margin: 10px 0px;
 }
 .notes-text{
     flex-grow: 1;
@@ -25,4 +25,10 @@
 .brief-note span{
     margin-top: 2px;
     margin-bottom: 2px;
+}
+
+@media screen and (min-width: 900px) {
+    .brief-note{
+        margin: 10px 40px;
+    }
 }
